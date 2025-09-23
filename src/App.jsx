@@ -30,14 +30,42 @@ function App() {
 }
 
 function Home() {
-  return <div className="flex flex-col w-full h-full items-center justify-center">
-    <Link to="/event-listeners" className="bg-zinc-800 p-4 m-4 rounded hover:bg-zinc-700 w-40 text-center">Event Listeners</Link>
-    <Link to="/props-vs-state" className="bg-zinc-800 p-4 m-4 rounded hover:bg-zinc-700 w-40 text-center">Props Vs State</Link>
-    <Link to="/conditional" className="bg-zinc-800 p-4 m-4 rounded hover:bg-zinc-700 w-40 text-center">Conditional</Link>
-    <Link to="/forms" className="bg-zinc-800 p-4 m-4 rounded hover:bg-zinc-700 w-40 text-center">Forms</Link>
-    <Link to="/use-state" className="bg-zinc-800 p-4 m-4 rounded hover:bg-zinc-700 w-40 text-center">UseState</Link>
-    <Link to="/api" className="bg-zinc-800 p-4 m-4 rounded hover:bg-zinc-700 w-40 text-center">Api</Link>
-  </div>
+  return (
+    <div className="flex flex-col w-full h-full items-center justify-center">
+      <div className="mb-8 text-center">
+        <h1 className="text-4xl font-bold mb-2">Welcome to the React Tutorial!</h1>
+        <p className="text-lg text-gray-400 max-w-xl mx-auto">
+          Explore interactive examples to learn key React concepts like state, props, event listeners, conditional rendering, forms, and working with APIs. Click a section below to get started!
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-2xl">
+        <Link to="/use-state" className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 flex flex-col items-center transition">
+          <span className="text-3xl mb-2" role="img" aria-label="UseState">⚡</span>
+          <span className="font-semibold">UseState</span>
+        </Link>
+        <Link to="/event-listeners" className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 flex flex-col items-center transition">
+          <span className="text-3xl mb-2" role="img" aria-label="Event">🖱️</span>
+          <span className="font-semibold">Event Listeners</span>
+        </Link>
+        <Link to="/props-vs-state" className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 flex flex-col items-center transition">
+          <span className="text-3xl mb-2" role="img" aria-label="Props vs State">🔄</span>
+          <span className="font-semibold">Props Vs State</span>
+        </Link>
+        <Link to="/conditional" className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 flex flex-col items-center transition">
+          <span className="text-3xl mb-2" role="img" aria-label="Conditional">❓</span>
+          <span className="font-semibold">Conditional</span>
+        </Link>
+        <Link to="/forms" className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 flex flex-col items-center transition">
+          <span className="text-3xl mb-2" role="img" aria-label="Forms">📝</span>
+          <span className="font-semibold">Forms</span>
+        </Link>
+        <Link to="/api" className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 flex flex-col items-center transition">
+          <span className="text-3xl mb-2" role="img" aria-label="API">🌐</span>
+          <span className="font-semibold">API</span>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
 export default App
