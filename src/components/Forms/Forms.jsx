@@ -14,7 +14,7 @@ export default function Forms() {
   const [secShow, setSecShow] = useState("");
 
   const [outputText, setOutputText] = useState("");
-  
+
   return (
     <div className="flex flex-col w-full h-full items-center justify-top gap-10 p-15">
       <div className="text-3xl font-bold">REACT FORMS</div>
@@ -116,7 +116,9 @@ export default function Forms() {
                 setGShow(gender);
                 setCShow(course);
                 setSecShow(section);
-                setOutputText(`Hello, ${fName} ${sName}. You are a ${gender} student of ${course} - ${section} section.`);
+                setOutputText(
+                  `Hello, ${fName} ${sName}. You are a ${gender} student of ${course} - ${section} section.`
+                );
               }}
             >
               Submit
