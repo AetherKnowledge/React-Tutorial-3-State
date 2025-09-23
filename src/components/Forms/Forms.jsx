@@ -107,7 +107,7 @@ export default function Forms() {
           {/*Submit Button*/}
           <div className="flex flex-row gap-2 w-full h-full justify-end items-end">
             <button
-              className="flex btn p-2 rounded-md bg-emerald-800 hover:bg-emerald-700 w-1/4 h-10 justify-center"
+              className="flex btn p-2 rounded-md bg-emerald-800 hover:bg-emerald-700 active:bg-emerald-600 w-1/4 h-10 justify-center cursor-pointer transition-colors duration-200"
               onClick={() => {
                 console.log(fName);
                 console.log(sName);
@@ -140,7 +140,7 @@ export default function Forms() {
           {/*Clear Button*/}
           <div className="flex flex-row gap-2 w-full justify-end">
             <button
-              className="flex btn p-2 rounded-md bg-neutral-800 hover:bg-neutral-700 w-1/4 h-10 justify-center"
+              className="flex btn p-2 rounded-md bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 w-1/4 h-10 justify-center cursor-pointer transition-colors duration-200"
               onClick={() => {
                 setFnShow("");
                 setSnShow("");

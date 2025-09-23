@@ -29,7 +29,7 @@ const Navbar = () => {
       {location.pathname !== "/" && 
       <>
         <Link to="/">
-        <IoMdArrowRoundBack className="text-zinc-200 hover:bg-zinc-800 rounded w-10 h-10 p-1" />
+        <IoMdArrowRoundBack className="text-zinc-200 hover:bg-zinc-800 rounded w-10 h-10 p-1 cursor-pointer transition-colors duration-200" />
         </Link>
       </>}
     </div>

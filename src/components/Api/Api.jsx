@@ -40,8 +40,8 @@ const Api = () => {
           <p>Loading...</p>
         )}
         <button
+          className="mt-4 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white px-4 py-2 rounded cursor-pointer transition-colors duration-200"
           onClick={getCatFact}
-          className="mt-4 bg-zinc-800 hover:bg-zinc-700 font-bold py-2 px-4 rounded"
         >
           Get New Cat Fact
         </button>

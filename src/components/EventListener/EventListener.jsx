@@ -27,7 +27,12 @@ const EventListener = () => {
         alt="Placeholder image from Picsum"
         onMouseOver={handleMouseOver}
       />
-      <button className="bg-blue-500 text-white p-2 px-4 rounded text-lg font-semibold" onClick={handleClick}>Click me</button>
+      <button
+        className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white px-4 py-2 rounded cursor-pointer transition-colors duration-200"
+        onClick={handleClick}
+      >
+        Click me
+      </button>
       <p className="text-lg">Last action: {message}</p>
     </div>
   );
