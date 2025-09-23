@@ -14,7 +14,9 @@ const EventListener = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div className="flex flex-col items-center justify-center space-y-4 bg-zinc-950 rounded-lg shadow-md p-4">
+      <h2 className="text-2xl font-bold mb-4">Event Listener Component</h2>
+      <p className="text-gray-600">This component listens for click and hover events.</p>
       <img
         className="w-160 h-90 block"
         src="https://picsum.photos/640/360"
