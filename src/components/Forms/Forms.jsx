@@ -7,6 +7,14 @@ export default function Forms() {
   const [course, setCourse] = useState("");
   const [section, setSection] = useState("");
 
+  const [fnShow, setFnShow] = useState("");
+  const [snShow, setSnShow] = useState("");
+  const [gShow, setGShow] = useState("");
+  const [cShow, setCShow] = useState("");
+  const [secShow, setSecShow] = useState("");
+
+  const [outputText, setOutputText] = useState("");
+  
   return (
     <div className="flex flex-col w-full h-full items-center justify-top gap-10 p-15">
       <div className="text-3xl font-bold">REACT FORMS</div>
@@ -22,7 +30,7 @@ export default function Forms() {
           <div className="text-md font-semibold">FullName</div>
           <div className="flex flex-row gap-2 w-full h-fit">
             <label className="text-md w-1/2 ">
-              First Name:
+              FirstName:
               <input
                 type="text"
                 placeholder="first name here"
@@ -32,7 +40,7 @@ export default function Forms() {
               />
             </label>
             <label className="text-md w-1/2 ">
-              SurName:
+              Surname:
               <input
                 type="text"
                 placeholder="surname here"
@@ -103,6 +111,12 @@ export default function Forms() {
                 console.log(gender);
                 console.log(course);
                 console.log(section);
+                setFnShow(fName);
+                setSnShow(sName);
+                setGShow(gender);
+                setCShow(course);
+                setSecShow(section);
+                setOutputText(`Hello, ${fName} ${sName}. You are a ${gender} student of ${course} - ${section} section.`);
               }}
             >
               Submit
@@ -111,7 +125,36 @@ export default function Forms() {
         </div>
 
         {/*RESULT CARD*/}
-        <div className="w-1/2 h-full bg-emerald-800 rounded-2xl p-5"></div>
+        <div className="w-1/2 h-full bg-emerald-800 rounded-2xl p-5 flex flex-col justify-between items-center">
+          <div className="text-lg font-bold w-full flex justify-center">
+            OUTPUT
+          </div>
+
+          <div className="text-md font-semibold">{outputText}</div>
+
+          {/*Clear Button*/}
+          <div className="flex flex-row gap-2 w-full justify-end">
+            <button
+              className="flex btn p-2 rounded-md bg-neutral-800 hover:bg-neutral-700 w-1/4 h-10 justify-center"
+              onClick={() => {
+                setFnShow("");
+                setSnShow("");
+                setGShow("");
+                setCShow("");
+                setSecShow("");
+
+                setFName("");
+                setSName("");
+                setGender("");
+                setCourse("");
+                setSection("");
+                setOutputText("");
+              }}
+            >
+              Clear
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
