@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Api from "./components/Api/Api";
 import Conditional from "./components/Conditional/Conditional";
 import EventListener from "./components/EventListener/EventListener";
+import Footer from "./components/Footer";
 import Forms from "./components/Forms/Forms";
 import Navbar from "./components/Navbar";
 import PropsVsState from "./components/PropsVsState/PropsVsState";
@@ -12,7 +13,8 @@ function App() {
   return (
     <div className="flex flex-col bg-zinc-900 text-zinc-200 w-full h-full">
       <Navbar />
-      <Routes>
+      <div className="h-full flex-grow overflow-auto">
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/event-listeners" element={<EventListener />} />
         <Route path="/props-vs-state" element={<PropsVsState />} />
@@ -21,6 +23,8 @@ function App() {
         <Route path="/forms" element={<Forms />} />
         <Route path="/api" element={<Api />} />
       </Routes>
+      </div>
+      <Footer />
     </div>
   )
 }
