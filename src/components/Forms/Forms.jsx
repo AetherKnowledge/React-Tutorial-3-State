@@ -8,11 +8,14 @@ export default function Forms() {
   const [section, setSection] = useState("");
 
   return (
-    <div className="flex flex-col w-full h-full items-center justify-top gap-10 p-15">
+    <div className="flex flex-col items-center justify-top gap-10 p-10 pt-3 bg-zinc-950 rounded-lg">
       <div className="text-3xl font-bold">REACT FORMS</div>
-
+      <p className="text-gray-300 text-lg max-w-2xl text-center mb-4">
+        <strong>Forms</strong> are how users interact with your app—entering information, making choices, and submitting data. In React, you use <code>useState</code> to keep track of what the user types or selects. Each input updates its own piece of state, so your app always knows the latest values.<br /><br />
+        This example shows how to build a form for personal information, handle changes, and manage the data in React. Try filling out the fields and clicking Submit to see how the state updates!
+      </p>
       {/*CARD PARENT*/}
-      <div className="w-full h-3/4 flex flex-row items-center justify-center gap-5">
+      <div className="w-250 h-100 flex flex-row items-center justify-center gap-5">
         {/*FORM CARD*/}
         <div className="w-1/2 h-full border-2 border-gray-300 rounded-2xl p-5 space-y-2 flex flex-col">
           <div className="text-lg font-bold w-full flex justify-center">
