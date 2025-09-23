@@ -12,7 +12,6 @@ const PropsVsState = () => {
       </h2>
       <p className="text-2xl text-white">
         Hello, <span className="font-semibold text-blue-300">{name}</span>! 👋
-        
       </p>
       <p className="text-lg text-zinc-400 mt-2 italic">
         (This text comes from props)
@@ -48,7 +47,7 @@ const PropsVsState = () => {
             onClick={() => setCount(0)}
             className="mt-2 px-8 py-3 bg-red-600 text-white text-xl font-bold rounded-lg hover:bg-red-500 transition-colors shadow-md mx-31"
           >
-            Clear 
+            Clear
           </button>
           <p className="text-lg text-zinc-400 italic">
             (This number updates with state)
