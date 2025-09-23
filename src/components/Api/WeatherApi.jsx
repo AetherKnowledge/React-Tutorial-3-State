@@ -40,8 +40,6 @@ const WeatherApi = () => {
             "Unknown",
         };
 
-        console.log("Current weather data:", data);
-
         setWeatherData({
           current,
           next_1_hours,
