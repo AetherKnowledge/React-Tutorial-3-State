@@ -30,23 +30,11 @@ const WeatherApi = () => {
             "Unknown",
         };
         const next_1_hours = {
-          temp:
-            rawCurrentWeather.data.next_1_hours?.summary?.symbol_code ||
-            "Unknown",
-          humidity:
-            rawCurrentWeather.data.next_1_hours?.summary?.symbol_code ||
-            "Unknown",
           condition:
             rawCurrentWeather.data.next_1_hours?.summary?.symbol_code ||
             "Unknown",
         };
         const next_6_hours = {
-          temp:
-            rawCurrentWeather.data.next_6_hours?.summary?.symbol_code ||
-            "Unknown",
-          humidity:
-            rawCurrentWeather.data.next_6_hours?.summary?.symbol_code ||
-            "Unknown",
           condition:
             rawCurrentWeather.data.next_6_hours?.summary?.symbol_code ||
             "Unknown",
@@ -68,18 +56,16 @@ const WeatherApi = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center bg-zinc-950 text-white p-4 rounded-xl shadow-lg w-64">
+    <div className="flex flex-row items-center p-4 rounded-xl shadow-lg gap-5 text-center">
       {weatherData ? (
         <>
-          <div className="text-2xl font-bold capitalize">
-            {weatherData.current.condition}
-          </div>
-          <div className="text-4xl font-bold mt-2">
-            {weatherData.current.temp}°C
-          </div>
-          <div className="text-md text-zinc-300 mt-1">
-            💧 {weatherData.current.humidity}%
-          </div>
+          <WeatherBox
+            temp={weatherData.current.temp}
+            humidity={weatherData.current.humidity}
+            condition={weatherData.current.condition}
+            conditionNextHour={weatherData.next_1_hours.condition}
+            conditionNext6Hours={weatherData.next_6_hours.condition}
+          />
         </>
       ) : (
         <p>Loading...</p>
@@ -87,5 +73,40 @@ const WeatherApi = () => {
     </div>
   );
 };
+
+function WeatherBox({ temp, humidity, condition, conditionNextHour, conditionNext6Hours }) {
+  return (
+    <div className="flex flex-col items-center justify-center bg-zinc-950 p-4 rounded-lg shadow-md">
+      <h2 className="text-4xl font-bold">Weather</h2>
+      <div className="flex flex-row gap-10 items-center justify-center">
+        <WeatherImage condition={condition} time="Now" />
+        <WeatherImage condition={conditionNextHour} time="In 1 Hour" />
+        <WeatherImage condition={conditionNext6Hours} time="In 6 Hours" />
+      </div>
+
+      <div className="text-2xl font-bold mt-2">
+        {temp}°C
+      </div>
+      <div className="text-md text-zinc-300 mt-1">
+        💧 {humidity}%
+      </div>
+    </div>
+  )
+}
+
+function WeatherImage({ condition, time }) {
+  return (
+    <div className="flex flex-col items-center justify-center w-30">
+      <img
+        src={`/weather/${condition}.svg`}
+        alt={condition}
+        className="w-20 h-20 mx-auto my-2"
+      />
+      <p className="text-2xl font-bold capitalize">
+        {time}
+      </p>
+    </div>
+  )
+}
 
 export default WeatherApi;

@@ -25,9 +25,7 @@ const Api = () => {
       <WeatherApi />
       <div className="flex flex-col items-center justify-center bg-zinc-950 text-white p-4 rounded-xl shadow-lg w-200">
       {catFact ? (
-        <>
-          <div className="text-lg">{catFact}</div>
-        </>
+        <div className="text-lg text-center">{catFact}</div>
       ) : (
         <p>Loading...</p>
       )}
