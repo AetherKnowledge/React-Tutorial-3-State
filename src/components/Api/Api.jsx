@@ -24,7 +24,12 @@ const Api = () => {
     <div className="flex flex-col items-center justify-center h-full p-4 gap-5">
       <div className="flex flex-col items-center mb-6 bg-zinc-950 p-6 rounded-xl shadow-lg w-200 gap-2">
         <h1 className="text-3xl font-bold">API Examples</h1>
-        <p className="text-gray-600">Api's are used to fetch data from a somewhere. Below are examples of fetching data from different APIs.</p>
+        <p className="text-gray-600">
+          <strong>What is an API?</strong> An API (Application Programming Interface) is like a messenger that lets your app talk to other services or databases to get information.<br /><br />
+          In React, you often use APIs to fetch data from the internet—like facts, weather, or user info—and display it in your app.<br /><br />
+          This component shows how to fetch a random cat fact from an API and display it. When you click the button, it asks the API for a new fact and updates the screen.<br /><br />
+          <em>APIs help your app stay up-to-date and interactive by bringing in fresh data from the outside world!</em>
+        </p>
       </div>
 
       <WeatherApi />

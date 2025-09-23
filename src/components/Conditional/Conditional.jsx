@@ -9,7 +9,10 @@ const Conditional = () => {
       <div className="text-center w-full bg-zinc-950 p-4 rounded-lg shadow-md">
         <h2 className="text-lg font-semibold">Ternary Operator</h2>
         <p className="text-gray-600">
-          The ternary operator is a shorthand for if-else statements.
+          The <strong>ternary operator</strong> is a quick way to write <em>if-else</em> logic in a single line. It's like asking: "Is this true? If yes, do one thing; if not, do something else."<br /><br />
+          <code>condition ? valueIfTrue : valueIfFalse</code><br /><br />
+          In React, it's often used to show different text or UI based on a condition. For example, here we greet you if you enter your name, or prompt you if you haven't.<br />
+          <em>Think of it as a shortcut switch for your UI!</em>
         </p>
         <input
           type="text"
@@ -25,8 +28,9 @@ const Conditional = () => {
       <div className="text-center w-full bg-zinc-950 p-4 rounded-lg shadow-md">
         <h2 className="text-lg font-semibold">Conditional Rendering</h2>
         <p className="text-gray-600">
-          Conditional rendering is a technique used in React to render different
-          UI elements based on certain conditions.
+          <strong>Conditional rendering</strong> lets your React app decide what to show based on certain conditions. It's like telling your app: "Show this only if something is true."<br /><br />
+          For example, you can show or hide a box depending on a button click. This makes your UI interactive and dynamic.<br />
+          <em>Imagine a magic window that only appears when you want it to!</em>
         </p>
         <button
           onClick={() => setShowBox(!showBox)}
