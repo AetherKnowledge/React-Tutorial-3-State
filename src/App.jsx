@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="flex flex-col bg-zinc-900 text-zinc-200 w-full h-full">
       <Navbar />
-      <div className="h-full flex-grow overflow-auto">
+      <div className="flex h-full flex-grow overflow-auto items-center justify-center p-4">
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/event-listeners" element={<EventListener />} />
