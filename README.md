@@ -1,12 +1,33 @@
-# React + Vite
+# React Tutorial App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an interactive React tutorial built with Vite. It helps you learn and explore key React concepts through hands-on examples and a friendly UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page:** Welcoming intro and easy navigation to all tutorial sections.
+- **UseState:** Learn about state management in React and see the difference between stateful and regular variables.
+- **Event Listeners:** Discover how React responds to user actions like clicks and mouse events.
+- **Props vs State:** Understand the difference between passing data via props and managing local state.
+- **Conditional Rendering:** See how React can show or hide UI elements based on conditions.
+- **Forms:** Practice handling user input and form submission in React.
+- **API:** Fetch and display live data from external APIs.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Run the app:**
+   ```bash
+   npm run dev
+   ```
+3. **Open in browser:** Navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## Navigation
+
+Use the navigation bar or Home page to explore each concept. Each section includes explanations and interactive examples to help you learn by doing.
+
+---
+
+Built with [React](https://react.dev/) and [Vite](https://vitejs.dev/).
