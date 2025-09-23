@@ -14,7 +14,7 @@ const EventListener = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 bg-zinc-950 rounded-lg shadow-md p-4">
+    <div className="flex flex-col items-center justify-center space-y-4 bg-zinc-950 rounded-lg shadow-md p-4 text-center">
       <h2 className="text-2xl font-bold mb-4">Event Listener Component</h2>
       <p className="text-gray-600">
         <strong>Event listeners</strong> let your React app respond to user actions, like clicks or mouse movements. You can think of them as your app's way of "listening" for things the user does, and then running code in response.<br /><br />
