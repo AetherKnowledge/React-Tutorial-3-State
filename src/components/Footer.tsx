@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="flex flex-col justify-center bg-zinc-950 items-center p-2 relative">
-      <p className="text-zinc-400 text-sm">
+      <div className="text-zinc-400 text-sm">
         Created by{" "}
         <span className="relative group underline hover:text-zinc-200 cursor-pointer">
           Group 3
@@ -20,8 +20,8 @@ const Footer = () => {
             <span>Jon Alfred Bernabe</span>
           </div>
         </span>
-      </p>
-      <p className="text-zinc-400 text-sm">
+      </div>
+      <div className="text-zinc-400 text-sm">
         Source code on{" "}
         <a
           href="https://github.com/AetherKnowledge/React-Tutorial-3-State"
@@ -29,7 +29,7 @@ const Footer = () => {
         >
           GitHub
         </a>
-      </p>
+      </div>
     </footer>
   );
 };

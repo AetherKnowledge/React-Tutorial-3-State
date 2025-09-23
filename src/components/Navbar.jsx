@@ -26,9 +26,12 @@ const Navbar = () => {
     </div>
     <h2 className="font-semibold text-xl">{formatPath(location.pathname)}</h2>
     <div className="flex justify-end w-60">
-      <Link to="/">
-      <IoMdArrowRoundBack className="text-zinc-200 hover:bg-zinc-800 rounded w-10 h-10 p-1" />
-    </Link>
+      {location.pathname !== "/" && 
+      <>
+        <Link to="/">
+        <IoMdArrowRoundBack className="text-zinc-200 hover:bg-zinc-800 rounded w-10 h-10 p-1" />
+        </Link>
+      </>}
     </div>
     
   </nav>;
