@@ -45,7 +45,7 @@ const PropsVsState = () => {
           </button>
           <button
             onClick={() => setCount(0)}
-            className="mt-2 px-8 py-3 bg-red-600 text-white text-xl font-bold rounded-lg hover:bg-red-500 transition-colors shadow-md mx-31"
+            className="mt-2 px-8 py-3 bg-red-600 text-white text-xl font-bold rounded-lg hover:bg-red-500 transition-colors shadow-md mx-auto"
           >
             Clear
           </button>
