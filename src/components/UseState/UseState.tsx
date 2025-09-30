@@ -166,10 +166,10 @@ const UseState = () => {
                 <pre className="text-sm text-gray-300 overflow-x-auto">
                   {`let count = 0;
 
-                    function increment() {
-                      count++; // Doesn't update UI
-                      console.log(count);
-                    }`}
+function increment() {
+  count++; // Doesn't update UI
+  console.log(count);
+}`}
                 </pre>
               </div>
 
@@ -180,10 +180,10 @@ const UseState = () => {
                 <pre className="text-sm text-gray-300 overflow-x-auto">
                   {`const [count, setCount] = useState(0);
 
-                  function increment() {
-                    setCount(count + 1); // Updates UI!
-                    console.log(count);
-                  }`}
+function increment() {
+  setCount(count + 1); // Updates UI!
+  console.log(count);
+}`}
                 </pre>
               </div>
             </div>
