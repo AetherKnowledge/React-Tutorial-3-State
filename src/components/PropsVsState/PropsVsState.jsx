@@ -5,7 +5,7 @@ const PropsVsState = () => {
   const [count, setCount] = useState(0);
 
   // Props -- Layouting
-  const Greeting = ({ name }) => (
+  const Greeting = ({ name, age, gender }) => (
     <div className="p-12 border-2 border-blue-500 shadow-xl rounded-2xl bg-zinc-900 text-center w-full max-w-2xl flex flex-col gap-6 transition-transform hover:scale-105 flex-wrap">
       <h2 className="text-5xl font-extrabold mb-6 text-blue-400 drop-shadow">
         Props
@@ -15,6 +15,9 @@ const PropsVsState = () => {
       </p>
       <p className="text-lg text-zinc-400 mt-2 italic">
         (This text comes from props)
+      </p>
+      <p className="text-xl text-white mt-4">
+        <b>{name}</b> is <b>{age}</b> years old and identifies as <b>{gender}</b>.
       </p>
     </div>
   );
@@ -27,7 +30,7 @@ const PropsVsState = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 p-10 w-full max-w-6xl flex-wrap">
         {/* Props Example */}
-        <Greeting name="Roi" />
+        <Greeting name="Roi" age="12" gender="Male" />
 
         {/* State Example */}
         <div className="p-12 border-2 border-blue-500 shadow-xl rounded-2xl bg-zinc-900 text-center flex flex-col gap-6 w-full max-w-2xl transition-transform hover:scale-105">
