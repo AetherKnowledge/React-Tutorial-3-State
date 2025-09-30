@@ -1,13 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Activity from "./Activity";
 
 const ActivityWithSample = () => {
-  const images = [
+  const baseImages = [
     { src: "/sample1.png", alt: "Sample 1" },
     { src: "/sample2.png", alt: "Sample 2" },
   ];
 
+  const [images, setImages] = useState(baseImages);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [typedSequence, setTypedSequence] = useState("");
+  const [pirateAdded, setPirateAdded] = useState(false);
+
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      const newSequence = (typedSequence + event.key.toLowerCase()).slice(-6); // Keep last 6 characters
+      setTypedSequence(newSequence);
+
+      if (newSequence.includes("pirate") && !pirateAdded) {
+        const pirateImage = { src: "/pirate.jpg", alt: "Pirate" };
+        setImages((prev) => [...prev, pirateImage]);
+        setPirateAdded(true);
+        // Show a brief notification
+        alert("🏴‍☠️ Pirate image unlocked!");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [typedSequence, pirateAdded]);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
