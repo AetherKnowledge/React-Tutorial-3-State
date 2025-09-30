@@ -1,5 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom";
-import Activity from "./components/Activity/Activity";
+import ActivityWithSample from "./components/Activity/ActivityWithSample";
 import Api from "./components/Api/Api";
 import Conditional from "./components/Conditional/Conditional";
 import EventListener from "./components/EventListener/EventListener";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="flex flex-col bg-zinc-900 text-zinc-200 w-full h-full">
       <Navbar />
-      <div className="flex h-full flex-grow overflow-auto items-center justify-center">
+      <div className="flex h-full flex-grow overflow-auto justify-center">
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/event-listeners" element={<EventListener />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/use-state" element={<UseState />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="/api" element={<Api />} />
-        <Route path="/activity" element={<Activity />} />
+        <Route path="/activity" element={<ActivityWithSample />} />
       </Routes>
       </div>
       <Footer />
