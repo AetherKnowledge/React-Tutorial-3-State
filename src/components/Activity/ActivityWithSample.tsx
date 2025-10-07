@@ -47,7 +47,7 @@ const ActivityWithSample = () => {
   };
 
   return (
-    <div className="flex flex-row w-full items-center justify-between">
+    <div className="flex flex-row w-full items-center justify-between h-[90vh]">
       <Activity />
       <div className="flex flex-col gap-5 items-center justify-center p-6 w-full border-l-1 h-full">
         <div className="mt-10 flex flex-col gap-5 items-center justify-center bg-zinc-950 p-4 rounded-lg">

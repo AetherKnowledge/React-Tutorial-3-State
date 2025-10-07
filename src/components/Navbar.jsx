@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
 
-  return <nav className="flex flex-row justify-between bg-zinc-950 h-16 items-center px-5">
+  return <nav className="fixed top-0 left-0 right-0 z-50 flex flex-row justify-between bg-zinc-950 h-16 items-center px-5">
     <div className="flex flex-row items-center justify-start w-60">
       {pirateMode && <img src="/pirate.jpg" alt="Pirate" className="h-10 w-10 mr-2" />}
       <h1 className="text-2xl font-bold cursor-pointer" onClick={() => setPirateMode(!pirateMode)}>React Tutorial</h1>

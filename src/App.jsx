@@ -12,10 +12,11 @@ import UseState from "./components/UseState/UseState";
 function App() {
 
   return (
-    <div className="flex flex-col bg-zinc-900 text-zinc-200 w-full h-full">
+    <div className="flex flex-col bg-gradient-to-br from-zinc-900 via-zinc-800 to-blue-900 text-zinc-200 w-full h-full min-h-screen">
       <Navbar />
-      <div className="flex h-full flex-grow overflow-auto justify-center">
-        <Routes>
+      {/* Add top padding equal to navbar height to avoid content being hidden under fixed navbar */}
+      <div className="flex h-full flex-grow justify-center pt-16 items-center">
+        <Routes> 
         <Route path="/" element={<Home />} />
         <Route path="/event-listeners" element={<EventListener />} />
         <Route path="/props-vs-state" element={<PropsVsState />} />
@@ -33,7 +34,7 @@ function App() {
 
 function Home() {
   return (
-    <div className="flex flex-col w-full h-full items-center justify-center">
+    <div className="flex flex-col h-full items-center justify-center rounded-lg bg-zinc-900 p-20">
       <div className="mb-8 text-center">
         <h1 className="text-4xl font-bold mb-2">Welcome to the React Tutorial!</h1>
         <p className="text-lg text-gray-400 max-w-xl mx-auto">
